@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.cdnfonts.com/css/futura-pt" rel="stylesheet" />
+    <title>Тестовые задания</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <a href="/" aria-label="Перейти на главную страницу">
+          <img
+            class="header__logo-image"
+            src="./img/logo.svg"
+            alt="Логотип компании" />
+        </a>
+      </div>
+      <div class="header__content">
+        <nav class="header__nav" aria-label="Основная навигация">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a
+                class="header__nav-link header__nav-link--active"
+                href="#"
+                aria-current="page"
+                >Главная</a
+              >
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">О нас</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Контакты</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Поиск</a>
+            </li>
+          </ul>
+          <div class="header__nav-toggle" aria-label="Закрыть меню">
+            <button class="header__menu-button" aria-label="Закрыть меню">
+              <img
+                class="header__menu-icon"
+                src="./img/close.svg"
+                alt="Закрыть меню"
+                aria-hidden="true" />
+            </button>
+          </div>
+        </nav>
+        <div class="header__contact">
+          <img
+            class="header__contact-icon"
+            src="./img/tel.svg"
+            alt="Телефон"
+            aria-hidden="true" />
+          <a
+            class="header__contact-number"
+            href="tel:+79878878787"
+            aria-label="Позвонить по номеру +7 (987) 887-87-87"
+            >+7 (987) 887-87</a
+          >
+        </div>
+        <button class="header__menu-button" aria-label="Открыть меню">
+          <img
+            class="header__menu-icon"
+            src="./img/burgre.svg"
+            alt=""
+            aria-hidden="true" />
+        </button>
+      </div>
+    </header>
+    <section class="banner">
+      <img src="./img/banner.png" alt="Баннер" />
+    </section>
+  </body>
+  <script src="main.js"></script>
+</html>
