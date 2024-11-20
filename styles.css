@@ -171,6 +171,10 @@ body {
 .sidebar__news-title {
   font-size: 18px;
 }
+.sidebar__news-link {
+  text-decoration: none;
+  color: #2f2222;
+}
 .sidebar__news-date {
   color: #2f222266;
   display: block;
@@ -185,6 +189,9 @@ body {
   padding-top: 6px;
   border-bottom: 1px solid #2f22221a;
   padding-bottom: 14px;
+}
+.sidebar__item:hover .sidebar__news-link {
+  color: #5d71dd;
 }
 .sidebar__form {
   display: flex;
@@ -207,14 +214,22 @@ body {
   color: #2f222266;
   margin-top: 33px;
 }
+.sidebar__form-input:hover {
+  background-color: #f9f9f9;
+}
 .sidebar__form-button {
   display: flex;
+  align-items: center;
   background-color: #5d71dd;
   border-radius: 20px;
   padding: 13px 68px;
   color: white;
   font-size: 16px;
   margin-top: 23px;
+  cursor: pointer;
+}
+.sidebar__form-button:hover {
+  background-color: #6c7dd8;
 }
 .sidebar__form-button-icon {
   padding-left: 9px;
@@ -228,6 +243,7 @@ body {
   padding: 8px 16px;
   border-radius: 8px;
   color: #5d71dd;
+  text-decoration: none;
 }
 .article__title {
   font-size: 24px;
@@ -251,7 +267,13 @@ body {
   flex: 1;
   padding: 40px 25px 31px 25px;
   border-radius: 20px;
-  background-color: #e6e6e6;
+  background-color: #ffffff;
+}
+.article__content:focus {
+  outline: 1.5px solid #5d71dd;
+}
+.article__content:hover {
+  box-shadow: 4px 8px 40px 0px #08186f33;
 }
 .article__related-meta,
 .article__related-date {
@@ -259,14 +281,20 @@ body {
 }
 
 .article__related {
+  display: flex;
   width: 320px;
   background-color: #5d71dd;
   border-radius: 20px;
   padding: 48px 29px;
 }
+.article__related:hover {
+  box-shadow: 4px 8px 40px 0px #08186f33;
+  background-color: #ffffff;
+}
 .article__related-category--blue {
   background-color: #7d8de4;
   color: white;
+  text-decoration: none;
 }
 .article__related-category--transparent {
   background-color: #5d71dd0d;
@@ -275,12 +303,29 @@ body {
   padding: 8px 16px;
   border-radius: 8px;
 }
+/*------------ */
+.article__related--hover:hover .article__title-link {
+  color: #2f2222;
+}
+.article__related--hover:hover .article__related-category {
+  color: #5d71dd;
+  background-color: #5d71dd0d;
+}
+.article__related--hover:hover .article__related-date {
+  color: #2f222266;
+}
+.article .article__category:hover,
+.article .article__related-category:hover {
+  background-color: #5d71dd26;
+}
+.article .article__related-meta .rticle__related-category--hover:hover {
+  background-color: #ffffff66;
+}
 .article__related-title {
   font-size: 24px;
   padding-top: 40px;
 }
 .article__related-date {
-  padding-top: 120px;
   display: block;
 }
 .article__related-item,
@@ -289,14 +334,21 @@ body {
   flex: 1;
   flex-direction: column;
   gap: 30px;
+  justify-content: space-between;
 }
 
 .article__related-item {
   display: flex;
   flex-direction: column;
 }
+.header__nav-link:hover {
+  color: #5d71dd;
+}
 .article--row-reverse {
   flex-direction: row-reverse;
+}
+.article--row-reverse .article__related-category {
+  background-color: #ffffff33;
 }
 .article__related--rectangle {
   background-image: url("./img/Rectangle.png");
@@ -308,7 +360,11 @@ body {
   background-size: cover;
   background-position: center;
 }
-
+.article__title-link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 400;
+}
 .pagination {
   display: flex;
   justify-content: center;
@@ -322,8 +378,11 @@ body {
 .pagination__item-number {
   font-size: 18px;
   text-decoration: none;
+  color: #000000;
 }
-
+.pagination__item-number:hover {
+  color: #5d71dd;
+}
 .pagination__button {
   display: flex;
   align-items: center;
@@ -333,6 +392,12 @@ body {
   cursor: pointer;
   font-size: 17px;
   margin-left: 8px;
+}
+.pagination__button:hover {
+  background-color: #5d71dd26;
+}
+.pagination__button:active {
+  background-color: #5d71dd33;
 }
 .pagination__item-number--active {
   color: #5d71dd;
@@ -373,6 +438,7 @@ body {
   padding-top: 66px;
   padding-bottom: 40px;
 }
+
 @media (max-width: 1440px) {
   .content {
     flex-direction: column;
@@ -416,6 +482,9 @@ body {
     margin-top: 0;
     width: 35%;
     justify-content: center;
+  }
+  .sidebar__form-button:focus {
+    border: 1.5px solid #2f2222;
   }
   .sidebar__form-input {
     margin-top: 0;
@@ -499,9 +568,6 @@ body {
   .article__related,
   .article {
     width: 100%;
-  }
-  .article__related-date {
-    padding-top: 30px;
   }
   .pagination {
     margin-top: 30px;
