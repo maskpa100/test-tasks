@@ -341,7 +341,17 @@ body {
   display: flex;
   flex-direction: column;
 }
-.header__nav-link:hover {
+.header__nav-link:hover,
+.footer__nav-link:hover {
+  color: #5d71dd;
+}
+.article__related-title .article__title-link:hover {
+  color: #5d71dd;
+}
+.article__related-title .article__title-link--hover:hover {
+  color: #d6d7de;
+}
+.article__title-link:hover {
   color: #5d71dd;
 }
 .article--row-reverse {
